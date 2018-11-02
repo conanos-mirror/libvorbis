@@ -39,13 +39,6 @@ class LibvorbisConan(ConanFile):
                 self.run('make -j2')
                 self.run('make install')
 
-                #vars = {'PKG_CONFIG_PATH': "%s/lib/pkgconfig"%(self.deps_cpp_info["libogg"].rootpath)}
-                #
-                #with tools.environment_append(vars):
-                #    self.run('rm ltmain.sh && sh autogen.sh --prefix %s/build --libdir %s/build/lib --enable-introspection'%(os.getcwd(),os.getcwd()))
-                #    self.run('make -j2')
-                #    self.run('make install')
-
     def package(self):
         if tools.os_info.is_linux:
             with tools.chdir(self.source_subfolder):
