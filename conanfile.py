@@ -15,7 +15,7 @@ class LibVorbisConan(ConanFile):
     generators = "cmake"
     settings = "os", "arch", "build_type", "compiler"
     options = {"shared": [True, False], "fPIC": [True, False]}
-    default_options = { 'shared': False, 'fPIC': True }
+    default_options = { 'shared': True, 'fPIC': True }
     requires = "libogg/1.3.3@conanos/stable"
 
     _source_subfolder = "source_subfolder"
